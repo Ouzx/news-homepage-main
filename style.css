@@ -1,0 +1,55 @@
+:root {
+  /* Screen Sizes */
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  /* Colors */
+  /* Primary */
+  --primary-soft-orange: hsl(35, 77%, 62%);
+  --primary-soft-red: hsl(5, 85%, 63%);
+
+  /* Neutral */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+
+  /* Font - Size */
+  --fs: 15px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs);
+
+  padding: 0px;
+  margin: 0px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+}
+
+.nav-links > ul {
+  list-style-type: none;
+
+  display: flex;
+}
+
+.nav-links > ul > li {
+  margin-left: 2em;
+}
+
+.nav-links > ul > li > a {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+}
+
+.nav-links > ul > li > a:hover {
+  color: var(--primary-soft-orange);
+}
