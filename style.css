@@ -28,6 +28,11 @@
   margin: 0px;
 }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -52,4 +57,24 @@ nav {
 
 .nav-links > ul > li > a:hover {
   color: var(--primary-soft-orange);
+}
+
+.hamburger {
+  display: none;
+  background-color: transparent;
+  background-image: url(./assets/images/icon-menu.svg);
+  background-repeat: none;
+  width: 40px;
+  height: 17px;
+  border: none;
+}
+
+@media screen and (max-width: 375px) {
+  .nav-links > ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
