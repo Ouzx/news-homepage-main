@@ -16,20 +16,23 @@
 
   /* Font - Size */
   --fs: 15px;
+
+  /* Grid Gap */
+  --grid-gap: 1.5em;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
 * {
   font-family: "Inter", sans-serif;
-  font-size: var(--fs);
+  /* font-size: var(--fs); */
 
   padding: 0px;
   margin: 0px;
 }
 
 body {
-  max-width: 1440px;
+  max-width: 64rem;
   margin: 0 auto;
 }
 
@@ -77,4 +80,77 @@ nav {
   .hamburger {
     display: block;
   }
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "hero hero side"
+    "hero hero side"
+    "one two three";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: var(--grid-gap);
+}
+
+.hero {
+  grid-area: hero;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: 1fr 0.75fr; */
+
+  gap: var(--grid-gap);
+}
+
+.hero h1 {
+  grid-column: 1;
+  grid-row: 1fr;
+}
+
+.hero img {
+  grid-column: -1/1;
+}
+
+/* TODO: Add margin later */
+.side {
+  grid-area: side;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr repeat(3, 2fr);
+}
+
+.side section:nth-child(1) {
+  grid-row: 1;
+}
+
+.side section:nth-child(2) {
+  grid-row: 2;
+}
+
+.side section:nth-child(3) {
+  /* grid-row: auto; */
+  grid-row: 3;
+}
+
+.side section:nth-child(4) {
+  grid-row: 4;
+}
+
+.o-one {
+  grid-area: one;
+}
+
+.o-two {
+  grid-area: two;
+}
+
+.o-three {
+  grid-area: three;
+}
+
+#hero-image {
+  width: 100%;
 }
