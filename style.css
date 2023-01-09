@@ -40,6 +40,10 @@ h1 {
   font-size: 3.2em;
 }
 
+h2 {
+  font-size: 2.2em;
+}
+
 p {
   font-size: var(--fs);
   line-height: 1.4em;
@@ -151,10 +155,30 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr repeat(3, 2fr);
+
+  padding: var(--grid-gap);
+
+  background-color: var(--very-dark-blue);
+  color: #fff;
 }
 
-.side section:nth-child(1) {
+.side > :nth-child(1) {
   grid-row: 1;
+  color: var(--primary-soft-orange);
+}
+
+.side :first-child:hover {
+  color: var(--primary-soft-orange);
+}
+
+.side p {
+  color: var(--grayish-blue);
+}
+
+.side section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .side section:nth-child(2) {
@@ -168,6 +192,11 @@ main {
 
 .side section:nth-child(4) {
   grid-row: 4;
+}
+
+.seperator {
+  height: 1px;
+  background-color: var(--dark-grayish-blue);
 }
 
 .o-one {
