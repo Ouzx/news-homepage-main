@@ -36,6 +36,15 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 3.2em;
+}
+
+p {
+  font-size: var(--fs);
+  line-height: 1.4em;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -111,6 +120,28 @@ main {
 
 .hero img {
   grid-column: -1/1;
+}
+
+.hero div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero p {
+  color: var(--dark-grayish-blue);
+}
+
+.hero button {
+  border: none;
+  background-color: var(--very-dark-blue);
+  padding: 1em 2.5em;
+  width: fit-content;
+
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.2em;
 }
 
 /* TODO: Add margin later */
