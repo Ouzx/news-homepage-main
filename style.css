@@ -151,6 +151,18 @@ main {
   grid-area: three;
 }
 
+.o {
+  display: flex;
+}
+
+.o-content {
+  display: block;
+}
+
+.o img {
+  height: 10rem;
+}
+
 #hero-image {
   width: 100%;
 }
